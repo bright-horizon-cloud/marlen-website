@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Marla home & décor: Elegant renovation, interior design, and décor in Johannesburg & Lubumbashi. Transforming homes into beautiful, functional living environments.">
-    <meta name="keywords" content="interior design, renovation, décor, Marla home & décor, home transformation, luxury design, Johannesburg, Lubumbashi">
+    <meta name="description" content="Marla home & décor provides renovation, interior design, and décor services in Johannesburg and Lubumbashi. Request a consultation today.">
+    <meta name="theme-color" content="#5C4033">
+    <meta name="keywords" content="interior design, renovation, décor, Marla home & décor, home transformation, Johannesburg, Lubumbashi">
     <meta name="author" content="Marla home & décor">
-    <title>Marla home & décor</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Marla home & décor">
+    <meta property="og:title" content="Marla home & décor — Renovation, Interior Design & Décor">
+    <meta property="og:description" content="Renovation, interior design, and décor services for homes in Johannesburg and Lubumbashi.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&h=630&q=75">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marla home & décor — Renovation, Interior Design & Décor">
+    <meta name="twitter:description" content="Renovation, interior design, and décor services for homes in Johannesburg and Lubumbashi.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&h=630&q=75">
+    <title>Marla home & décor — Renovation & Interior Design</title>
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=75" fetchpriority="high">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap">
 
     <!-- Tailwind CDN -->
@@ -44,7 +58,8 @@
     <script defer src="assets/js/main.js"></script>
 </head>
 
-<body class="bg-cream text-walnut font-body min-h-screen relative">
+<body class="bg-cream text-walnut font-body min-h-screen relative pb-20 lg:pb-0">
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!-- ========== NAVIGATION ========== -->
     <header class="fixed top-0 left-0 w-full z-40 bg-cream/90 dark:bg-walnut/90 shadow-sm transition-colors">
@@ -64,7 +79,7 @@
             <!-- Right controls -->
             <div class="flex items-center gap-3">
                 <!-- Request Quotation CTA -->
-                <button id="open-quote-modal" class="hidden sm:inline-block button-quote text-sm">Get a Free Quote</button>
+                <button id="open-quote-modal" class="hidden sm:inline-block button-quote text-sm">Prepare Quote Request</button>
 
                 <!-- Dark mode toggle -->
                 <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full bg-linen hover:bg-sage transition-colors">
@@ -73,7 +88,7 @@
                 </button>
 
                 <!-- Hamburger (mobile) -->
-                <button id="hamburger" class="hamburger md:hidden" aria-label="Open menu">
+                <button id="hamburger" class="hamburger md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -89,26 +104,27 @@
             <a href="#services" class="hover:text-olive" data-scroll>Services</a>
             <a href="#strength" class="hover:text-olive" data-scroll>Our Strength</a>
             <a href="#contact" class="hover:text-olive" data-scroll>Contact</a>
-            <button class="button-quote mt-4 open-quote-modal-link">Get a Free Quote</button>
+            <button class="button-quote mt-4 open-quote-modal-link">Prepare Quote Request</button>
         </div>
     </header>
 
     <!-- ========== HERO ========== -->
+    <main id="main">
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
         <!-- Background image -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=80" alt="Luxury interior" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=75" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1600" height="1067" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-br from-cream/80 via-linen/60 to-walnut/40"></div>
         </div>
         <div class="parallax__layer" data-depth="0.08" style="z-index:1;">
-            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" alt="Elegant living room" class="absolute right-0 top-24 w-1/2 max-w-md opacity-60 rounded-3xl shadow-xl hidden lg:block">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=75" alt="Elegant living room interior with warm décor accents" loading="lazy" decoding="async" width="800" height="533" class="absolute right-0 top-24 w-1/2 max-w-md opacity-60 rounded-3xl shadow-xl hidden lg:block">
         </div>
         <div class="relative z-10 text-center max-w-2xl mx-auto px-4">
             <h1 class="font-elegant text-4xl md:text-6xl text-walnut mb-4 drop-shadow-lg">Marla home &amp; décor</h1>
             <p class="text-xl md:text-2xl text-walnut/80 dark:text-linen mb-8 font-semibold">Renovation &bull; Interior Design &bull; Décor</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact" class="button text-lg px-8 py-3 shadow-lg" data-scroll>Book a Consultation</a>
-                <button class="button-quote text-lg px-8 py-3 shadow-lg open-quote-modal-link">Get a Free Quote &rarr;</button>
+                <button class="button-quote text-lg px-8 py-3 shadow-lg open-quote-modal-link">Prepare Quote Request &rarr;</button>
             </div>
         </div>
     </section>
@@ -116,7 +132,7 @@
     <!-- ========== PROFILE ========== -->
     <section id="profile" class="bg-linen dark:bg-[#3b2f24]">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=500&fit=crop&q=80" alt="Elegant home interior" class="rounded-2xl shadow-lg w-64 h-80 object-cover mb-6 md:mb-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&h=500&q=75" alt="Elegant home interior with bright natural finishes" loading="lazy" decoding="async" width="400" height="500" class="rounded-2xl shadow-lg w-64 h-80 object-cover mb-6 md:mb-0">
             <div>
                 <h2 class="font-elegant text-3xl text-olive mb-3">About Marla home &amp; décor</h2>
                 <p class="text-lg mb-4">Marla home & décor is a full-service renovation, interior design, and décor studio with offices in Johannesburg and Lubumbashi. We are dedicated to transforming homes into beautiful, functional living environments — creating stylish, personalized spaces that reflect our clients' vision from concept to completion.</p>
@@ -133,7 +149,7 @@
                 <!-- Renovation -->
                 <div class="bg-linen dark:bg-[#3b2f24] rounded-2xl shadow-md overflow-hidden group">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1585128792020-803d29415281?w=600&q=80" alt="Home renovation in progress" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1585128792020-803d29415281?auto=format&fit=crop&w=600&q=75" alt="Home renovation work in progress" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex flex-col items-center">
                         <h3 class="font-elegant text-xl text-olive mb-2">Renovation</h3>
@@ -144,7 +160,7 @@
                 <!-- Interior Design -->
                 <div class="bg-linen dark:bg-[#3b2f24] rounded-2xl shadow-md overflow-hidden group">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="Modern interior design living room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=75" alt="Modern interior design in a styled living room" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex flex-col items-center">
                         <h3 class="font-elegant text-xl text-olive mb-2">Interior Design</h3>
@@ -155,7 +171,7 @@
                 <!-- Décor -->
                 <div class="bg-linen dark:bg-[#3b2f24] rounded-2xl shadow-md overflow-hidden group">
                     <div class="h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Elegant home décor arrangement" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=75" alt="Elegant home décor arrangement with furniture and accessories" loading="lazy" decoding="async" width="600" height="400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6 flex flex-col items-center">
                         <h3 class="font-elegant text-xl text-olive mb-2">Décor</h3>
@@ -203,14 +219,14 @@
             </div>
             <!-- Gallery strip -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80" alt="Kitchen renovation" class="rounded-xl h-40 w-full object-cover hover:scale-[1.02] transition-transform">
-                <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=400&q=80" alt="Bedroom interior" class="rounded-xl h-40 w-full object-cover hover:scale-[1.02] transition-transform">
-                <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84?w=400&q=80" alt="Living room décor" class="rounded-xl h-40 w-full object-cover hover:scale-[1.02] transition-transform">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" alt="Modern lounge" class="rounded-xl h-40 w-full object-cover hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=400&q=75" alt="Kitchen renovation with modern finishes" loading="lazy" decoding="async" width="400" height="267" class="rounded-xl h-40 w-full object-cover hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=400&q=75" alt="Bedroom interior with warm neutral styling" loading="lazy" decoding="async" width="400" height="267" class="rounded-xl h-40 w-full object-cover hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=400&q=75" alt="Living room décor with layered textures" loading="lazy" decoding="async" width="400" height="267" class="rounded-xl h-40 w-full object-cover hover:scale-[1.02] transition-transform">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=75" alt="Modern lounge with bright interior finishes" loading="lazy" decoding="async" width="400" height="267" class="rounded-xl h-40 w-full object-cover hover:scale-[1.02] transition-transform">
             </div>
             <!-- CTA -->
             <div class="text-center mt-10">
-                <button class="button-quote text-lg px-10 py-3 shadow-lg open-quote-modal-link">Start Your Project &rarr;</button>
+                <button class="button-quote text-lg px-10 py-3 shadow-lg open-quote-modal-link">Prepare Project Enquiry &rarr;</button>
             </div>
         </div>
     </section>
@@ -222,25 +238,25 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Renovation & Interior Gallery -->
                 <div class="grid grid-cols-2 gap-3">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80" alt="Modern kitchen renovation" class="rounded-2xl h-44 w-full object-cover shadow-md hover:scale-[1.03] transition-transform">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&q=80" alt="Stylish living room interior" class="rounded-2xl h-44 w-full object-cover shadow-md hover:scale-[1.03] transition-transform">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" alt="Elegant lounge design" class="rounded-2xl h-44 w-full object-cover shadow-md hover:scale-[1.03] transition-transform">
-                    <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=400&q=80" alt="Bedroom interior decoration" class="rounded-2xl h-44 w-full object-cover shadow-md hover:scale-[1.03] transition-transform">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=400&q=75" alt="Modern kitchen renovation with clean cabinetry" loading="lazy" decoding="async" width="400" height="267" class="rounded-2xl h-44 w-full object-cover shadow-md hover:scale-[1.03] transition-transform">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=400&q=75" alt="Stylish living room interior with neutral palette" loading="lazy" decoding="async" width="400" height="267" class="rounded-2xl h-44 w-full object-cover shadow-md hover:scale-[1.03] transition-transform">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=75" alt="Elegant lounge design with natural light" loading="lazy" decoding="async" width="400" height="267" class="rounded-2xl h-44 w-full object-cover shadow-md hover:scale-[1.03] transition-transform">
+                    <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=400&q=75" alt="Bedroom interior decoration with layered textiles" loading="lazy" decoding="async" width="400" height="267" class="rounded-2xl h-44 w-full object-cover shadow-md hover:scale-[1.03] transition-transform">
                 </div>
                 <div class="flex flex-col gap-6">
                     <div>
                         <h3 class="font-elegant text-xl text-olive mb-2">Johannesburg Studio</h3>
                         <p class="text-lg">54 Rivonia Road, Sandton<br>Johannesburg, 2196, South Africa</p>
-                        <p class="text-base mt-1">+27 (11) 784 5600</p>
+                        <p class="text-base mt-1"><a class="contact-link" href="tel:+27117845600">+27 (11) 784 5600</a></p>
                     </div>
                     <div>
                         <h3 class="font-elegant text-xl text-olive mb-2">Lubumbashi Office</h3>
                         <p class="text-lg">Avenue Kasavubu 6113<br>Lubumbashi, Haut-Katanga, DR Congo</p>
-                        <p class="text-base mt-1">+243 85 305 4901</p>
+                        <p class="text-base mt-1"><a class="contact-link" href="tel:+243853054901">+243 85 305 4901</a></p>
                     </div>
                     <div>
                         <h3 class="font-elegant text-xl text-olive mb-2">Email</h3>
-                        <p class="text-lg">hello@marlahomedeco.com</p>
+                        <p class="text-lg"><a class="contact-link" href="mailto:hello@marlahomedeco.com">hello@marlahomedeco.com</a></p>
                     </div>
                     <div>
                         <iframe class="rounded-xl shadow-md w-full h-40" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sandton+City,+Johannesburg,+South+Africa&output=embed"></iframe>
@@ -249,6 +265,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- ========== QUOTATION MODAL ========== -->
     <div id="quote-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
@@ -257,23 +274,29 @@
             <button id="close-quote-modal" class="absolute top-3 right-3 text-walnut/50 hover:text-walnut transition-colors" aria-label="Close">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
-            <h3 class="font-elegant text-2xl text-olive mb-2">Get Your Free Quote</h3>
-            <p class="text-walnut/60 mb-5">Tell us about your vision and we'll craft a tailored quotation — no obligation.</p>
+            <h3 class="font-elegant text-2xl text-olive mb-2">Prepare Your Quote Request</h3>
+            <p class="text-walnut/60 mb-5">Tell us about your vision. We will prepare a WhatsApp message for you to review and send.</p>
             <form id="quote-form" class="flex flex-col gap-4">
-                <input type="text" name="q_name" placeholder="Full Name" class="px-4 py-2 rounded border border-sage focus:outline-none focus:ring-2 focus:ring-olive transition" required>
-                <input type="email" name="q_email" placeholder="Email Address" class="px-4 py-2 rounded border border-sage focus:outline-none focus:ring-2 focus:ring-olive transition" required>
-                <input type="tel" name="q_phone" placeholder="Phone Number (optional)" class="px-4 py-2 rounded border border-sage focus:outline-none focus:ring-2 focus:ring-olive transition">
-                <select name="q_service" class="px-4 py-2 rounded border border-sage focus:outline-none focus:ring-2 focus:ring-olive transition" required>
+                <label class="form-label" for="q-name">Full Name</label>
+                <input id="q-name" type="text" name="q_name" autocomplete="name" class="form-control" required>
+                <label class="form-label" for="q-email">Email Address</label>
+                <input id="q-email" type="email" name="q_email" autocomplete="email" class="form-control" required>
+                <label class="form-label" for="q-phone">Phone Number</label>
+                <input id="q-phone" type="tel" name="q_phone" autocomplete="tel" inputmode="tel" class="form-control">
+                <label class="form-label" for="q-service">Service Required</label>
+                <select id="q-service" name="q_service" class="form-control" required>
                     <option value="" disabled selected>Select a Service</option>
-                    <option value="renovation">Renovation</option>
-                    <option value="interior-design">Interior Design</option>
-                    <option value="decor">Décor</option>
-                    <option value="full-package">Full Package</option>
+                    <option>Renovation</option>
+                    <option>Interior Design</option>
+                    <option>Décor</option>
+                    <option>Full Package</option>
                 </select>
-                <textarea name="q_details" rows="3" placeholder="Project details (budget, timeline, scope...)" class="px-4 py-2 rounded border border-sage focus:outline-none focus:ring-2 focus:ring-olive transition" required></textarea>
-                <button type="submit" class="button-quote mt-2 py-3">Submit Request &rarr;</button>
+                <label class="form-label" for="q-details">Project Details</label>
+                <textarea id="q-details" name="q_details" rows="3" class="form-control" required></textarea>
+                <p class="text-sm text-walnut/60 dark:text-linen/70">Photos are not uploaded here. Attach them in WhatsApp after the message opens.</p>
+                <button type="submit" class="button-quote mt-2 py-3">Send via WhatsApp &rarr;</button>
             </form>
-            <p id="quote-success" class="hidden text-olive font-semibold mt-4 text-center">Thank you! We'll be in touch soon.</p>
+            <p id="quote-success" class="hidden text-olive font-semibold mt-4 text-center" tabindex="-1">Your request has been prepared. Please send the message in WhatsApp so the team can respond.</p>
         </div>
     </div>
 
@@ -281,21 +304,38 @@
     <footer class="flex flex-wrap items-center justify-center gap-3 mt-8">
         <span>&copy; 2025 Marla home &amp; décor</span>
         <span class="hidden sm:inline">|</span>
-        <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5a5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5a3.75 3.75 0 0 0 0-7.5zm5.25 1.25a1 1 0 1 1-2 0a1 1 0 0 1 2 0z"/></svg>
-        </a>
-        <a href="#" class="social-link" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489c-.094-.807-.178-2.048.037-2.93c.195-.803 1.252-5.12 1.252-5.12s-.319-.638-.319-1.582c0-1.484.861-2.592 1.934-2.592c.912 0 1.353.684 1.353 1.504c0 .917-.584 2.288-.885 3.563c-.252 1.066.535 1.936 1.587 1.936c1.904 0 3.37-2.01 3.37-4.91c0-2.564-1.844-4.36-4.478-4.36c-3.052 0-4.85 2.29-4.85 4.658c0 .924.355 1.918.8 2.457c.089.108.102.202.075.31c-.082.338-.263 1.066-.299 1.213c-.047.195-.155.237-.36.143c-1.344-.624-2.182-2.58-2.182-4.154c0-3.385 2.457-6.5 7.092-6.5c3.726 0 6.62 2.654 6.62 6.2c0 3.697-2.33 6.67-5.57 6.67c-1.114 0-2.162-.604-2.522-1.29l-.686 2.61c-.197.755-.583 1.7-.868 2.277C9.84 21.82 10.91 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-        </a>
-        <a href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.525 8.998h-2.02V7.62c0-.464.308-.573.525-.573h1.465V4.998h-2.01c-2.22 0-2.735 1.67-2.735 2.735v1.265H10v2.5h2.25v6.5h3v-6.5h2.02l.255-2.5z"/></svg>
-        </a>
+        <a href="mailto:hello@marlahomedeco.com" class="footer-action">Email</a>
+        <a href="https://wa.me/243853054901?text=Hello%20Marla%20home%20%26%20d%C3%A9cor.%20I%20would%20like%20to%20ask%20about%20your%20services." class="footer-action" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="tel:+243853054901" class="footer-action">Call</a>
     </footer>
 
     <!-- Back to Top Button -->
     <button id="backToTop" aria-label="Back to top">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg>
     </button>
+
+    <div class="mobile-action-bar" aria-label="Quick contact actions">
+        <a href="tel:+243853054901">Call</a>
+        <a href="https://wa.me/243853054901?text=Hello%20Marla%20home%20%26%20d%C3%A9cor.%20I%20would%20like%20to%20request%20a%20consultation." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Marla home & décor",
+      "description": "Renovation, interior design, and décor services for homes in Johannesburg and Lubumbashi.",
+      "telephone": "+243853054901",
+      "email": "hello@marlahomedeco.com",
+      "areaServed": ["Johannesburg", "Lubumbashi"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lubumbashi",
+        "addressRegion": "Haut-Katanga",
+        "addressCountry": "CD"
+      }
+    }
+    </script>
 
 </body>
 </html>
