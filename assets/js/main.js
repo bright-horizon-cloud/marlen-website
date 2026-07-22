@@ -21,12 +21,14 @@ function openMobileNav() {
   hamburger.classList.add('active');
   navMenu.classList.add('active');
   navOverlay.classList.add('active');
+  hamburger.setAttribute('aria-expanded', 'true');
 }
 
 function closeMobileNav() {
   hamburger.classList.remove('active');
   navMenu.classList.remove('active');
   navOverlay.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
 }
 
 if (hamburger && navMenu && navOverlay) {
@@ -38,6 +40,12 @@ if (hamburger && navMenu && navOverlay) {
     }
   });
   navOverlay.addEventListener('click', closeMobileNav);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+      closeMobileNav();
+      hamburger.focus();
+    }
+  });
 }
 
 // Close mobile nav when a link inside it is clicked
@@ -49,12 +57,14 @@ navMenu?.querySelectorAll('a[data-scroll]').forEach(link => {
 const quoteModal = document.getElementById('quote-modal');
 const quoteForm = document.getElementById('quote-form');
 const quoteSuccess = document.getElementById('quote-success');
+const whatsappNumber = '243853054901';
 
 function openQuoteModal() {
   if (quoteModal) {
     quoteModal.classList.remove('hidden');
     quoteModal.classList.add('active');
   }
+  quoteSuccess?.classList.add('hidden');
   closeMobileNav();
 }
 function closeQuoteModal() {
@@ -79,19 +89,29 @@ if (quoteForm) {
     const data = new FormData(this);
     const name = data.get('q_name')?.toString().trim();
     const email = data.get('q_email')?.toString().trim();
+    const phone = data.get('q_phone')?.toString().trim();
     const service = data.get('q_service')?.toString();
     const details = data.get('q_details')?.toString().trim();
     if (!name || !email || !service || !details) return;
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return;
-    // Show success (no backend — replace with fetch() when ready)
-    quoteForm.classList.add('hidden');
+
+    const message = [
+      'Hello Marla home & décor. I would like to request a quote.',
+      '',
+      `Name: ${name}`,
+      `Phone: ${phone || 'Not provided'}`,
+      `Email: ${email}`,
+      `Service required: ${service}`,
+      '',
+      'Project details:',
+      details,
+      '',
+      'I can attach photos in WhatsApp if needed.'
+    ].join('\n');
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     quoteSuccess.classList.remove('hidden');
-    setTimeout(() => {
-      closeQuoteModal();
-      quoteForm.reset();
-      quoteForm.classList.remove('hidden');
-      quoteSuccess.classList.add('hidden');
-    }, 3000);
+    quoteSuccess.focus();
   });
 }
 
@@ -122,10 +142,13 @@ backToTop?.addEventListener('click', () => {
 });
 
 // Parallax effect
-window.addEventListener('scroll', function() {
-  document.querySelectorAll('.parallax__layer').forEach(layer => {
-    const depth = layer.getAttribute('data-depth');
-    const movement = -(window.scrollY * depth);
-    layer.style.transform = `translateY(${movement}px)`;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!prefersReducedMotion) {
+  window.addEventListener('scroll', function() {
+    document.querySelectorAll('.parallax__layer').forEach(layer => {
+      const depth = layer.getAttribute('data-depth');
+      const movement = -(window.scrollY * depth);
+      layer.style.transform = `translateY(${movement}px)`;
+    });
   });
-});
+}
